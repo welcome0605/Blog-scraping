@@ -1,0 +1,10 @@
+5 more with button click
+6 more with scroll
+7 no problem
+10 exactly what to scrape?
+11 paination and go into then scrape
+12 not same structure component
+14 exactly what to scrape?
+15 server error
+18 no pagination.go into then scrape
+19 no problem

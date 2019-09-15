@@ -1,0 +1,42 @@
+
+The general structure of most of the blogs is the main page has a list of titles and the detail post can be got by clicking the post title in main URL. The data we will be pulling in all blogs will be a title text, the post text and a date the post was published, any category or tags assosiated with the blogs.
+
+
+1) http://blogs.nature.com/ - The nature blog consists of blogs mainly in the subject areas of biological sciences, scientific community and society, earth and environmental sciences, health sciences and physical sciences. There are specific categories we can filter by e.g.: biotechnology. Blog content varies from around 200 to 800 words. There are posts from 2006 to current with around 26,000 posts in total
+
+2) http://blogs.rsc.org/tx/ - This blog has posts related to Toxicology research. There are categories which we can use to label our text. There are posts from 2011 to current with less than 100 posts in total. Word counts range from 50 to 500.
+
+3) https://www.health.harvard.edu/blog/  - The Harvard Health Blog has posts from experts from Harvard Health Publishing and others on a variety of health topics, medical news and views. The blog posts are categorized by topics. The topics could be used for labeled data. Blog content varies from around 500 to 1000 words. There are posts from 2009 to current with around 1900 posts in total
+
+4) http://voices.nationalgeographic.com/ - The National Geographic blog has categories such as changing planet that has more relevant information in the health and environmental domain. Each post has a category and tags. In the changing planet category, there are posts from 2008 to current with around 6500 posts. Blog content varies from around 400 to 1000 words.
+
+5) http://www.npr.org/sections/health-shots/ - The NPR health shots blog is a text posting of the corresponding NPR radio recording. The blogs are long from 800 to 1400 words each. We need to click the “Load More Stories” button at the end to get to more posts. The "Script" would be able to automatically click on all the “Load More Stories” to read all blog posts.
+
+6) https://blog.americanchemistry.com/ - The American Chemistry Blog has pre-defined topics which can narrow the blog posts to Chemical regulation, Energy, Sustainability etc. 
+
+7) https://blog.dol.gov/tag/occupational-safety-health-administration-osha 
+
+8) https://blog.ecu.edu/sites/ehsprogram/category/eh-student-news/ The blog post has many images and very few text data. We need to scroll to the end of the page to get to more posts. Blog content varies from around 300 to 700 words. We can have the "Script" automatically scroll through the page and get to all the blog posts.
+
+9) https://blog.epa.gov/- This blog consists of new releases from the EPA. There are posts from 2017 to current.
+
+10) https://cen.acs.org/topics/environment.html – In the Chemical & Engineering news blog site we are only going into the “Environment” topic. There are sub-topics such as Biotechnology, Climate change, Food science etc. To get all the posts from each sub-topic we will need to click the “Load More” button at the end of the page. Having the "Script" automatically click through the page and get to all the blog posts will be the way we can read all the content.
+
+11) https://deohs.washington.edu/hsm-blog - We need to go to Latest stories and then click into each blog post. Paginate to get to more posts.
+
+12) https://directorsblog.nih.gov/ - Only select posts of blogs are available in the home page. Need to find a way to scroll through timestamped posts.
+
+13) https://env.chem.uconn.edu/blog/# - Environmental Chemistry & Geochemistry blog has data from 2015 to current. There are less than 50 blog posts with very little content in them. Most of the posts link to other blogs
+
+14) https://newsletter.echa.europa.eu/ - The European Chemicals Agency blogs has data from 2008 to current. There are around 6000 blogs with word counts ranging from 400 to 800 words.
+
+15) https://toxchange.toxicology.org/p/bl/et/blogid=9 – The society of toxicology blog as posts from 2012 to current. There are around 2000 posts with word counts ranging from 400 to 600 words.
+
+16) https://www.aiha.org/publications-and-resources/TheSynergist/SynergistNow/default.aspx - SynergistNOW, is a blog from the American Industrial Hygiene Association, offers ideas, insights, and perspectives on important topics affecting industrial and occupational hygiene. 
+
+17) The following blogs have tags in addition to title, content, and date:
+http://www.aphlblog.org/category/environmental-health/ - There are blog posts from 2009 to current. Total posts are around 70 and the word counts of posts range from 400 to 800
+
+18) https://blog.mass.gov/publichealth/ - The Mass Public Health Blog has posts promoting public health and wellness in Massachusetts. The posts have tags and categories. There are blog posts from 2009 to current. There are around 1000 posts and the word counts of posts range from 300 to 800.
+
+19) https://blogs.cdc.gov/ - The main link gives a list of other blogs based on topic.
