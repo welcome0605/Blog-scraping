@@ -2,7 +2,6 @@
 import csv
 import sys
 import os
-
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
@@ -12,6 +11,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 import requests
 from bs4 import BeautifulSoup
+
+from selenium.webdriver.common.keys import Keys
 
 import time
 
@@ -50,46 +51,58 @@ def add_csv_row(date, title, content):
 def pull_blog(url):
     driver.get(url)
 
+    i = 0
+    while i < 5000:
+        driver.find_element_by_tag_name('body').send_keys(Keys.PAGE_DOWN)
+        time.sleep(0.5)
+        i += 1
+
     article_dates = []
     article_titles = []
     article_contents = []
+    links = []
 
     blogs = driver.find_elements_by_tag_name('article')
-    # print(len(blogs))
-    for blog in blogs:
 
-        postdates = blog.find_elements_by_class_name('loop-entry-meta-date')
+    for blog in blogs:
+        postdates = blog.find_elements_by_class_name('date')
         for postdate in postdates:
             article_dates.append(postdate.text)
 
-        article_titles.append(blog.find_element_by_tag_name('h2').text)
+        # article_titles.append(blog.find_element_by_class_name('title').text)
 
-        # article_contents.append(blog.find_elements_by_tag_name('p'))
-
-        contents = blog.find_elements_by_class_name('loop-entry-excerpt')
-        for content in contents:
-            article_contents.append(content.text)
+        titles = blog.find_elements_by_class_name('title')
+        for title in titles:
+            links.append(title.find_element_by_tag_name('a').get_attribute('href'))
+            article_titles.append(title.text)
 
     # print(len(article_dates))
-    # print(len(article_titles))
-    # print(len(article_contents))
+    for i in range(0, len(links)):
+        # page = requests.get(links[i])
+        # soup = BeautifulSoup(page.content, 'html.parser')
+        # section = soup.find('div', class_='storytext') 
+        # # print(section)
+        # temp = ''
+        # for tag in section.find_all('p'):
+        #     temp += tag.getText()
+        # article_contents.append(temp)
+
+        driver.get(links[i])
+        time.sleep(1)
+        # print(links[i])
+        contents = driver.find_elements_by_class_name('storytext')
+        temp = ''
+        for content in contents:
+            for info in content.find_elements_by_tag_name('p'):
+                temp += info.text
+        article_contents.append(temp)
 
     for i in range(0, len(article_dates)):
         add_csv_row(article_dates[i], article_titles[i], article_contents[i])
 
-
 driver = setUpChrome()
 add_csv_head()
 
-pull_blog('http://www.aphlblog.org/category/environmental-health/')
-
-i = 2
-while i < 8:
-  pull_blog('http://www.aphlblog.org/category/environmental-health/page/' + str(i) + '/')
-  time.sleep(2)
-  i += 1
+pull_blog('https://www.npr.org/sections/health-shots/archive')
 
 print("done")
-
-
-
